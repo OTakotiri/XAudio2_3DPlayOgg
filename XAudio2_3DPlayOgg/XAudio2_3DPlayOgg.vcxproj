@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{05E20567-B890-4D16-BD53-B9CE9300CCC0}</ProjectGuid>
+    <RootNamespace>My2020GameProject</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(DXSDK_DIR)Include;$(ProjectDir)\_Library\libogg\_include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(ProjectDir)\_Library\libogg\_lib\_Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(DXSDK_DIR)Include;$(ProjectDir)\_Library\libogg\_include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(ProjectDir)\_Library\libogg\_lib\_Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>libogg.lib;libvorbis_static.lib;libvorbisfile_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libogg.lib;libvorbis_static.lib;libvorbisfile_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="SorceCode\Camera\Camera.cpp" />
+    <ClCompile Include="SorceCode\Camera\CameraManager\CameraManager.cpp" />
+    <ClCompile Include="SorceCode\Camera\SimpleCamera\SimpleCamera.cpp" />
+    <ClCompile Include="SorceCode\Common\Common.cpp" />
+    <ClCompile Include="SorceCode\Common\D3DX\D3DX.cpp" />
+    <ClCompile Include="SorceCode\Common\FileManager\FileManager.cpp" />
+    <ClCompile Include="SorceCode\Common\FPSCounter\FPSCounter.cpp" />
+    <ClCompile Include="SorceCode\Common\Mesh\Dx9StaticMesh\Dx9StaticMesh.cpp" />
+    <ClCompile Include="SorceCode\Common\Shader\ShaderBase.cpp" />
+    <ClCompile Include="SorceCode\Common\Shader\SimpleShader\SimpleShader.cpp" />
+    <ClCompile Include="SorceCode\Main\Main.cpp" />
+    <ClCompile Include="SorceCode\Main\WinMain.cpp" />
+    <ClCompile Include="SorceCode\Resource\MeshResource\MeshResource.cpp" />
+    <ClCompile Include="SorceCode\Scene\SceneManager\SceneManager.cpp" />
+    <ClCompile Include="SorceCode\Scene\TitleScene\TitleScene.cpp" />
+    <ClCompile Include="SorceCode\XAudio2\OggLoad\OggLoad.cpp" />
+    <ClCompile Include="SorceCode\XAudio2\SoundManager.cpp" />
+    <ClCompile Include="SorceCode\XAudio2\X3DAudio\X3DAudio.cpp" />
+    <ClCompile Include="SorceCode\XAudio2\X3DAudio\X3DAudioPlay\X3DAudioPlayBGM.cpp" />
+    <ClCompile Include="SorceCode\XAudio2\X3DAudio\X3DAudioPlay\X3DAudioPlaySE.cpp" />
+    <ClCompile Include="SorceCode\XAudio2\XAudio2Master\XAudio2MasterVoice.cpp" />
+    <ClCompile Include="SorceCode\XAudio2\XAudio2Play\XAudio2PlayBGM.cpp" />
+    <ClCompile Include="SorceCode\XAudio2\XAudio2Play\XAudio2PlaySE.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SorceCode\Camera\Camera.h" />
+    <ClInclude Include="SorceCode\Camera\CameraManager\CameraManager.h" />
+    <ClInclude Include="SorceCode\Camera\SimpleCamera\SimpleCamera.h" />
+    <ClInclude Include="SorceCode\Common\Common.h" />
+    <ClInclude Include="SorceCode\Common\D3DX\D3DX.h" />
+    <ClInclude Include="SorceCode\Common\FileManager\FileManager.h" />
+    <ClInclude Include="SorceCode\Common\FPSCounter\FPSCounter.h" />
+    <ClInclude Include="SorceCode\Common\Mesh\Dx9StaticMesh\Dx9StaticMesh.h" />
+    <ClInclude Include="SorceCode\Common\Shader\ShaderBase.h" />
+    <ClInclude Include="SorceCode\Common\Shader\SimpleShader\SimpleShader.h" />
+    <ClInclude Include="SorceCode\Main\Global.h" />
+    <ClInclude Include="SorceCode\Main\Main.h" />
+    <ClInclude Include="SorceCode\Main\MyMacro.h" />
+    <ClInclude Include="SorceCode\ObjectBase\ObjectBase.h" />
+    <ClInclude Include="SorceCode\Resource\MeshResource\MeshResource.h" />
+    <ClInclude Include="SorceCode\Scene\SceneBase\SceneBase.h" />
+    <ClInclude Include="SorceCode\Scene\SceneList.h" />
+    <ClInclude Include="SorceCode\Scene\SceneManager\SceneManager.h" />
+    <ClInclude Include="SorceCode\Scene\TitleScene\TitleScene.h" />
+    <ClInclude Include="SorceCode\XAudio2\OggLoad\OggLoad.h" />
+    <ClInclude Include="SorceCode\XAudio2\SoundManager.h" />
+    <ClInclude Include="SorceCode\XAudio2\X3DAudio\X3DAudio.h" />
+    <ClInclude Include="SorceCode\XAudio2\X3DAudio\X3DAudioPlay\X3DAudioPlayBGM.h" />
+    <ClInclude Include="SorceCode\XAudio2\X3DAudio\X3DAudioPlay\X3DAudioPlaySE.h" />
+    <ClInclude Include="SorceCode\XAudio2\XAudio2.h" />
+    <ClInclude Include="SorceCode\XAudio2\XAudio2CallBack\VoiceCallBack.h" />
+    <ClInclude Include="SorceCode\XAudio2\XAudio2Master\XAudio2MasterVoice.h" />
+    <ClInclude Include="SorceCode\XAudio2\XAudio2Play\XAudio2PlayBGM.h" />
+    <ClInclude Include="SorceCode\XAudio2\XAudio2Play\XAudio2PlaySE.h" />
+    <ClInclude Include="SorceCode\XAudio2\XAudio2Vector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Data\Shader\Mesh.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">VS_Main</EntryPointName>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">VS_Main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
